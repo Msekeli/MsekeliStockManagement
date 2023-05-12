@@ -1,0 +1,114 @@
+﻿<Window x:Class="MsekeliStockManagement.Pages.AddDataWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MsekeliStockManagement.Pages"
+        mc:Ignorable="d"
+        Title="AddDataWin" Height="450" Width="350"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        MouseDown="Window_MouseDown">
+    <Grid>
+        <Border CornerRadius="20"
+                BorderThickness="2"
+                BorderBrush="White"
+                Opacity="0.95">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#313437" Offset="0.0"/>
+                    <GradientStop Color="#516473" Offset="1.5"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Grid RenderTransformOrigin="0.612,0.88">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="140"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="2">
+                    <Button x:Name="BtnClose"
+                            Style="{StaticResource ButtonCloseStyle}"
+                            Cursor="Hand"
+                            Click="BtnClose_Click"/>
+                </StackPanel>
+
+             <StackPanel Grid.ColumnSpan="2">
+              <TextBlock Text="Add Product"
+               Foreground="Beige"
+               FontSize="16"
+               FontWeight="Bold"
+               FontFamily="Roboto"
+               HorizontalAlignment="Center"
+               Margin="0 30 0 0"/>
+
+             </StackPanel>
+
+
+                <StackPanel>
+                    <TextBlock Text="Product Category :"
+                               Foreground="#D1DBE4"
+                               Margin="20 100 15 20"
+                               FontWeight="DemiBold"/>
+
+                    <TextBlock Text="Product Name :"
+                               Foreground="#D1DBE4"
+                               Margin="20 10 20 20"
+                               FontWeight="DemiBold"/>
+
+                    <TextBlock Text="Cost Price :"
+                               Foreground="#D1DBE4"
+                               Margin="20 10 20 20"
+                               FontWeight="DemiBold"/>
+                    
+                    <TextBlock Text="Selling Price :"
+                               Foreground="#D1DBE4"
+                               Margin="20 10 20 20"
+                               FontWeight="DemiBold"/>
+
+                    <TextBlock Text="Quntity :"
+                               Foreground="#D1DBE4"
+                               Margin="20 10 20 20"
+                               FontWeight="DemiBold"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" RenderTransformOrigin="0.496,0.731">
+
+                    <TextBox Margin="0 90 20 0"
+                             x:Name="TBP_category"
+                             Style="{StaticResource TextBoxInputStyle}"/>
+
+                    <TextBox Margin="0 10 20 0"
+                             x:Name="TBP_name"
+                             Style="{StaticResource TextBoxInputStyle}"/>
+
+                    <TextBox Margin="0 10 20 0"
+                             x:Name="TBC_price"
+                             Style="{StaticResource TextBoxInputStyle}"/>
+
+                    <TextBox Margin="0 10 20 0"
+                             x:Name="TBS_price"
+                             Style="{StaticResource TextBoxInputStyle}"/>
+                    <TextBox Margin="0 10 20 0"
+                             x:Name="TBQuality"
+                             Style="{StaticResource TextBoxInputStyle}"/>
+
+
+                    <Button Grid.Column="1"
+                            Content="Add Product"
+                            FontFamily="Roboto"
+                            x:Name="BtnSubmit"
+                            Style="{StaticResource RBStyle}"
+                            Click="BtnSubmit_Click"/>
+
+                </StackPanel>
+                
+            </Grid>
+            
+        </Border>
+        
+    </Grid>
+</Window>
